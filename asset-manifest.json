@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/Assignment6-pt2/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/Assignment6-pt2/static/js/main.80a390ad.chunk.js",
-    "main.js.map": "/Assignment6-pt2/static/js/main.80a390ad.chunk.js.map",
-    "runtime-main.js": "/Assignment6-pt2/static/js/runtime-main.d846815c.js",
-    "runtime-main.js.map": "/Assignment6-pt2/static/js/runtime-main.d846815c.js.map",
-    "static/js/2.07fc31dd.chunk.js": "/Assignment6-pt2/static/js/2.07fc31dd.chunk.js",
-    "static/js/2.07fc31dd.chunk.js.map": "/Assignment6-pt2/static/js/2.07fc31dd.chunk.js.map",
-    "static/js/3.4703005f.chunk.js": "/Assignment6-pt2/static/js/3.4703005f.chunk.js",
-    "static/js/3.4703005f.chunk.js.map": "/Assignment6-pt2/static/js/3.4703005f.chunk.js.map",
+    "main.css": "/Assignment6-pt2/static/css/main.5e705cfd.chunk.css",
+    "main.js": "/Assignment6-pt2/static/js/main.b91cfe89.chunk.js",
+    "main.js.map": "/Assignment6-pt2/static/js/main.b91cfe89.chunk.js.map",
+    "runtime-main.js": "/Assignment6-pt2/static/js/runtime-main.2a87a86f.js",
+    "runtime-main.js.map": "/Assignment6-pt2/static/js/runtime-main.2a87a86f.js.map",
+    "static/js/2.16598ef6.chunk.js": "/Assignment6-pt2/static/js/2.16598ef6.chunk.js",
+    "static/js/2.16598ef6.chunk.js.map": "/Assignment6-pt2/static/js/2.16598ef6.chunk.js.map",
+    "static/js/3.33441345.chunk.js": "/Assignment6-pt2/static/js/3.33441345.chunk.js",
+    "static/js/3.33441345.chunk.js.map": "/Assignment6-pt2/static/js/3.33441345.chunk.js.map",
     "index.html": "/Assignment6-pt2/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/Assignment6-pt2/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.07fc31dd.chunk.js.LICENSE.txt": "/Assignment6-pt2/static/js/2.07fc31dd.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/Assignment6-pt2/static/media/logo.6ce24c58.svg"
+    "static/css/main.5e705cfd.chunk.css.map": "/Assignment6-pt2/static/css/main.5e705cfd.chunk.css.map",
+    "static/js/2.16598ef6.chunk.js.LICENSE.txt": "/Assignment6-pt2/static/js/2.16598ef6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d846815c.js",
-    "static/js/2.07fc31dd.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.80a390ad.chunk.js"
+    "static/js/runtime-main.2a87a86f.js",
+    "static/js/2.16598ef6.chunk.js",
+    "static/css/main.5e705cfd.chunk.css",
+    "static/js/main.b91cfe89.chunk.js"
   ]
 }
