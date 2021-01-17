@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from 'react';
+import axios from 'axios';
 
-class MatchCity extends Component {
+export default class MatchCity extends Component {
   constructor() {
     super();
     this.state = {
@@ -33,14 +33,14 @@ class MatchCity extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <h1> City name Search</h1>
-        <label name="citymane"> City Name:</label>
+        <label name='citymane'> City Name:</label>
         {/* <input name="cityname" placeholder="New York" value={this.state.cityname} onChange={this.handleChange}/>
               <button  onClick={(e)=>{if(e.key === 'Enter') this.componentDidMount()}}>Search</button> */}
         {/* <MatchCity cityname={this.state.result}/> */}
-        <input type="text" name="zipcode" onChange={this.handleChange}></input>
-        <ul className="no-bullets">
+        <input type='text' name='zipcode' onChange={this.handleChange}></input>
+        <ul className='no-bullets'>
           {this.state.zipcode.map((zipcode, i) => (
             <li key={i}>{zipcode}</li>
           ))}
@@ -49,5 +49,3 @@ class MatchCity extends Component {
     );
   }
 }
-
-export default MatchCity;
