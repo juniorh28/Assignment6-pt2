@@ -6,10 +6,10 @@ export default class MatchCity extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cityname: 'Brooklyn',
+      cityname: '',
       zipcodes: [],
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleCopy = this.handleCopy.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -34,7 +34,7 @@ export default class MatchCity extends Component {
       .catch(console.error());
   }
 
-  handleClick(e) {
+  handleCopy(e) {
     if (e.target.className === 'zipcode-container') {
       const zip = e.target;
 
@@ -73,7 +73,7 @@ export default class MatchCity extends Component {
             onChange={this.handleChange}
           ></input>
         </div>
-        <ZipTable click={this.handleClick} zipcodes={this.state.zipcodes} />
+        <ZipTable click={this.handleCopy} zipcodes={this.state.zipcodes} />
       </div>
     );
   }
