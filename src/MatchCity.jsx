@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ZipTable from './ZipTable';
 
 export default class MatchCity extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      cityname: null,
-      zipcode: [],
+      cityname: 'Brooklyn',
+      zipcodes: [],
     };
+    this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -26,25 +28,52 @@ export default class MatchCity extends Component {
         }
 
         this.setState({
-          zipcode: zipArr,
+          zipcodes: zipArr,
         });
       })
       .catch(console.error());
   }
+
+  handleClick(e) {
+    if (e.target.className === 'zipcode-container') {
+      const zip = e.target;
+
+      // Ignore click if you already copied text
+      if (zip.innerText === 'COPIED!') return;
+
+      // Select the text, copy it, then deselect it
+      window.getSelection().selectAllChildren(zip);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+
+      // show copy success
+      const originalText = zip.innerText;
+      const originalBG = zip.style.backgroundColor;
+      const originalColor = zip.style.color;
+      zip.innerText = 'COPIED!';
+      zip.style.backgroundColor = 'white';
+      zip.style.color = 'black';
+      setTimeout(() => {
+        zip.innerText = originalText;
+        zip.style.backgroundColor = originalBG;
+        zip.style.color = originalColor;
+      }, 1000);
+    }
+  }
+
   render() {
     return (
       <div className='App'>
-        <h1> City name Search</h1>
-        <label name='citymane'> City Name:</label>
-        {/* <input name="cityname" placeholder="New York" value={this.state.cityname} onChange={this.handleChange}/>
-              <button  onClick={(e)=>{if(e.key === 'Enter') this.componentDidMount()}}>Search</button> */}
-        {/* <MatchCity cityname={this.state.result}/> */}
-        <input type='text' name='zipcode' onChange={this.handleChange}></input>
-        <ul className='no-bullets'>
-          {this.state.zipcode.map((zipcode, i) => (
-            <li key={i}>{zipcode}</li>
-          ))}
-        </ul>
+        <div className='header'>
+          <h1>Search Zip Code By City</h1>
+          <label name='cityname'> City Name:</label>
+          <input
+            type='text'
+            name='zipcode'
+            onChange={this.handleChange}
+          ></input>
+        </div>
+        <ZipTable click={this.handleClick} zipcodes={this.state.zipcodes} />
       </div>
     );
   }
